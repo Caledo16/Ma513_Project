@@ -30,6 +30,9 @@ def train_model():
 def evaluate_model(model, test_data, test_labels):
     """
     evaluate the model with test data
+    :param model: model to evaluate
+    :param test_data: test input
+    :param test_labels: test output
     """
     test_loss, test_accuracy = model.evaluate(test_data, test_labels)
     print("Test accuracy: ", test_accuracy)
