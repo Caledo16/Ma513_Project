@@ -5,8 +5,8 @@ from sklearn.model_selection import train_test_split
 
 def train_model():
     """
-
-    :return:
+    train the model created in the cnn_model file and with the data load and preprocessed in load_data file
+    :return: the model, the test data and the test output
     """
     file_path = 'images_malware.npz'
     data = load_data(file_path)
@@ -28,5 +28,8 @@ def train_model():
 
 
 def evaluate_model(model, test_data, test_labels):
+    """
+    evaluate the model with test data
+    """
     test_loss, test_accuracy = model.evaluate(test_data, test_labels)
     print("Test accuracy: ", test_accuracy)
